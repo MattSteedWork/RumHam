@@ -318,7 +318,7 @@ int main()
     // Get WinLogon deets
 
     findWinlogonPID();
-    findLsassPID();
+  //  findLsassPID();
 
     ProcessId = pid;
     printf("[*] WinLogon PID is:%lu\n", pid);
