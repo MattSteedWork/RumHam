@@ -1,3 +1,11 @@
+
+/**
+- Future update
+- Make menu driven to make use of NT SYSTEM
+- Add LSASS Stealer
+- Follow manual stealing method (Find patterns based on OS for crypt, follow linked lists to encrypted content)
+ */
+
 #include <windows.h>
 #include <stdio.h>
 #include <tlhelp32.h>
@@ -132,18 +140,6 @@ BOOL SetPrivilege(IN HANDLE hToken, IN LPCWSTR szPrivilegeName) {
     return TRUE;
 }
 
-/**
- * @brief
- *  steal primary token from
- *  specified process id 
- *
- * @param Pid
- *  process id to steal
- *  primary token from
- *
- * @return
- *  process primary token 
- */
 HANDLE StealToken(_In_ ULONG Pid)
 {
     HANDLE TokenHandle   = { 0 };
